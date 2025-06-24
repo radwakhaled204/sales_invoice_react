@@ -79,7 +79,7 @@ const ProductDetails = ({ onChange }) => {
 </div>
 
 
-      <table>
+      <table className="editable-product-table">
         <thead>
           <tr>
             <th>اختيار</th>
@@ -99,20 +99,20 @@ const ProductDetails = ({ onChange }) => {
         <tbody>
           <tr>
             <td><input type="checkbox" /></td>
-            <td>6</td>
-            <td>2025</td>
-            <td>10</td>
-            <td>2026-01-01</td>
-            <td>2</td>
-            <td>20</td>
-            <td>1</td>
-            <td>100</td>
-            <td>5%</td>
-            <td>95</td>
-            <td>950</td>
+            <td><input type="number" name="month" defaultValue="6" className="table-input" /></td>
+            <td><input type="number" name="year" defaultValue="2025" className="table-input" /></td>
+            <td><input type="number" name="quantity" defaultValue="10" className="table-input" /></td>
+            <td><input type="date" name="expiryDate" defaultValue="2026-01-01" className="table-input" /></td>
+            <td><input type="number" name="bonus" defaultValue="2" className="table-input" /></td>
+            <td><input type="number" name="stock" defaultValue="20" className="table-input" /></td>
+            <td><input type="number" name="pack" defaultValue="1" className="table-input" /></td>
+            <td><input type="number" name="price" defaultValue="100" className="table-input" /></td>
+            <td><input type="text" name="discount" defaultValue="5%" className="table-input" /></td>
+            <td><input type="number" name="priceAfter" defaultValue="95" className="table-input" /></td>
+            <td><input type="number" name="total" defaultValue="950" className="table-input" /></td>
           </tr>
-          {/* مزيد من الصفوف حسب الحاجة */}
         </tbody>
+
       </table>
     </div>
   );

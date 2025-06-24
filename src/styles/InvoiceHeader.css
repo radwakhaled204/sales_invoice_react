@@ -150,6 +150,31 @@
 }
 
 
+.editable-product-table {
+  width: 100%;
+  table-layout: fixed; 
+  border-collapse: collapse;
+}
+
+.editable-product-table th,
+.editable-product-table td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.editable-product-table input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 14px;
+}
+
+
+
 
 
 .product-details {
