@@ -105,7 +105,7 @@
 
 .button-row button {
   padding: 8px 14px;
-  background-color: #4caf50;
+  background-color: #1976d2;
   border: none;
   color: white;
   font-weight: bold;
@@ -114,7 +114,7 @@
 }
 
 .button-row button:hover {
-  background-color: #388e3c;
+  background-color: #1565c0;
 }
 
 .checkbox-group {
@@ -222,16 +222,17 @@
 
 .product-details button {
   padding: 8px 16px;
-  background-color: #2e7d32;
+  background-color: #1976d2;
   color: white;
   border: none;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  width: 100px;
 }
 
 .product-details button:hover {
-  background-color: #1b5e20;
+  background-color: #1565c0;
 }
 
 .product-details table {
@@ -252,4 +253,143 @@
 .product-details th {
   background-color: #f0f0f0;
   font-weight: bold;
+}
+.form-group-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.form-group-inline label {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.form-group-inline input {
+  width: 150px;
+  padding: 6px;
+  font-size: 13px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+.form-group-inline-item input {
+  width: 60px;
+  padding: 6px;
+  font-size: 13px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+.form-group-inline-name input {
+  width: 200px;
+  padding: 6px;
+  font-size: 13px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+.invoice-summary {
+  padding: 20px;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 0 5px #ccc;
+  direction: rtl;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.summary-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.summary-table,
+.journal-container {
+  flex: 1;
+  direction: rtl;
+}
+
+.journal-container {
+  max-width: 60%;
+}
+
+.summary-table {
+  max-width: 40%;
+}
+
+.summary-table .row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.summary-table label {
+  width: 120px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.summary-table input {
+  padding: 6px;
+  width: 160px;
+}
+
+.summary-table span {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.post-button {
+  padding: 8px 16px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+}
+
+.journal-container h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #333;
+  text-align: right;
+}
+
+.journal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 16px;
+  table-layout: auto; /* ✅ خلي الأعمدة تاخد حجم محتواها */
+}
+
+.journal-table th,
+.journal-table td {
+  border: 1px solid #aaa;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.journal-table input {
+  width: 150px;
+  padding: 6px;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  margin: 0 auto; /* ✅ يحطه في وسط العمود */
+  box-sizing: border-box;
 }
