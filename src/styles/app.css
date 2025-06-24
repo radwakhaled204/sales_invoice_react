@@ -1,0 +1,40 @@
+.App {
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.invoice-header label,
+.totals-panel label {
+  display: inline-block;
+  margin: 10px;
+}
+
+input, select {
+  margin-right: 5px;
+}
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+}

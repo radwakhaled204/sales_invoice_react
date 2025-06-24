@@ -1,0 +1,154 @@
+.invoice-header {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 5px #ccc;
+  direction: rtl;
+}
+
+.section-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+  text-align: right;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  flex: 1;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+}
+
+.form-group button {
+  padding: 8px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #1565c0;
+}
+
+.small-input {
+  width: 80px;
+}
+
+.large-select {
+  width: 150px;
+}
+
+.tiny-input {
+  width: 70px;
+}
+
+
+
+
+.product-details {
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 5px #bbb;
+  direction: rtl;
+}
+
+.product-details .section-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #222;
+  text-align: right;
+}
+
+.product-details .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.product-details .form-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  flex: 1;
+}
+
+.product-details .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-details .form-group input,
+.product-details .form-group select {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.product-details button {
+  padding: 8px 16px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-details button:hover {
+  background-color: #1b5e20;
+}
+
+.product-details table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.product-details th,
+.product-details td {
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.product-details th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
