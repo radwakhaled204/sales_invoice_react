@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/InvoiceHeader.css";
 import { generateInvoicePdf } from '../components/generateInvoicePdf';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -11,6 +12,7 @@ const InvoiceSummary = () => {
     tax: 0,
     additionalTax: 0,
   });
+const navigate = useNavigate();
 
   const [journalEntries, setJournalEntries] = useState([
     { debitAmount: "", debitParty: "", creditAmount: "", creditParty: "" },
@@ -81,6 +83,10 @@ return (
        <button className="post-button" onClick={() => generateInvoicePdf(summary, journalEntries)}>
   ترحيل
 </button>
+<button className="post-button" onClick={() => navigate(-1)}>
+  السابق
+</button>
+
       </div>
 
       {/* شمال: جدول القيود */}
