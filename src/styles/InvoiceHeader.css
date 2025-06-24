@@ -70,7 +70,24 @@
 }
 
 .tiny-input {
-  width: 70px;
+  width: 100px;
+}
+
+.fill-row {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+}
+
+.fill-row .tiny-input {
+  flex: 1;
+  min-width: 60px;
+}
+
+.form-group.form-inline {
+  flex: 0 0 auto;
 }
 
 

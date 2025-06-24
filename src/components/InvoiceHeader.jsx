@@ -63,7 +63,7 @@ const InvoiceHeader = ({ invoiceNumber, customerNumber, onChange }) => {
         </div>
 
         <div className="form-group form-inline">
-          <label>
+          <label style={{marginBottom: '0px'}}>
             <input type="checkbox" />
             اختيار العميل
           </label>
@@ -111,16 +111,16 @@ const InvoiceHeader = ({ invoiceNumber, customerNumber, onChange }) => {
         </div>
 
         <div className="form-group form-inline">
-          <label>الدفترى:</label>
+          <label style={{ marginBottom: '0px' }}>الدفترى:</label>
           <div className="inline-fields">
             <input type="text" name="manualNumber" className="small-input" />
             <button>طباعة الدفترى</button>
           </div>
         </div>
 
-        <div className="form-group">
-          <label>صرف:</label>
-          <div className="inline-fields">
+        <div className="form-group form-inline">
+          <label style={{ marginBottom: '0px' }}>صرف:</label>
+          <div className="inline-fields fill-row">
             <input type="text" value="صرف" readOnly className="tiny-input" />
             <input type="text" value="المبيعات" readOnly className="tiny-input" />
             <input type="date" defaultValue={today} readOnly className="tiny-input" />
