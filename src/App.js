@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles/app.css';
 import './styles/InvoiceHeader.css';
-import { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import InvoiceSummary from './components/InvoiceSummary';
 import InvoiceHeader from './components/InvoiceHeader';
-import ProductTable from './components/ProductTable';
-import TotalsPanel from './components/TotalsPanel';
-import AccountingEntries from './components/AccountingEntries';
-import ActionButtons from './components/ActionButtons';
-import DownloadInvoicePdf from './components/DownloadInvoicePdf';
-
 import ProductDetails from "./components/ProductDetails";
+import generateInvoicePdf from "./components/generateInvoicePdf";
+
 
 function App() {
   const [formData, setFormData] = useState({
@@ -22,15 +19,33 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <InvoiceHeader
-        invoiceNumber={formData.invoiceNumber}
-        customerNumber={formData.customerNumber}
-        onChange={handleChange}
-      />
-      <ProductDetails onChange={handleChange} />
-    </div>
-    
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="App">
+              <InvoiceHeader
+                invoiceNumber={formData.invoiceNumber}
+                customerNumber={formData.customerNumber}
+                onChange={handleChange}
+              />
+              <ProductDetails onChange={handleChange} />
+               
+            </div>
+          }
+        />
+        <Route
+          path="/invoice"
+          element={
+            <div className="App">
+              <InvoiceSummary />
+            </div>
+          }
+        />
+        <Route path="/summary" element={<InvoiceSummary />} />
+      </Routes>
+    </Router>
   );
 }
 
