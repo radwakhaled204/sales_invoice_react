@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './styles/app.css';
 import './styles/InvoiceHeader.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import InvoiceSummary from './components/InvoiceSummary';
 import InvoiceHeader from './components/InvoiceHeader';
 import ProductDetails from "./components/ProductDetails";
+import Index from './components/Index';
 import generateInvoicePdf from "./components/generateInvoicePdf";
 
 
@@ -21,34 +22,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="App">
-              <InvoiceHeader
-                invoiceNumber={formData.invoiceNumber}
-                customerNumber={formData.customerNumber}
-                onChange={handleChange}
-              />
-              <ProductDetails onChange={handleChange} />
-               
-            </div>
-          }
-        />
-        <Route
-          path="/invoice"
-          element={
-            <div className="App">
-              <InvoiceSummary />
-            </div>
-          }
-        />
-        <Route path="/summary" element={<InvoiceSummary />} />
+        <Route path="/" element={<Navigate to="/Index" />} />
+        <Route path="/Index" element={<Index />} />
+        
+       
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
-
