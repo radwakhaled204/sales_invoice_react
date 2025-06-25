@@ -273,13 +273,6 @@
   border: 1px solid #aaa;
   border-radius: 4px;
 }
-.form-group-inline-item input {
-  width: 60px;
-  padding: 6px;
-  font-size: 13px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-}
 .form-group-inline-name input {
   width: 200px;
   padding: 6px;
@@ -287,6 +280,14 @@
   border: 1px solid #aaa;
   border-radius: 4px;
 }
+.form-group-inline-item input {
+  width: 60px;
+  padding: 6px;
+  font-size: 13px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
 
 
 
