@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import InvoiceSummary from './components/InvoiceSummary';
 import InvoiceHeader from './components/InvoiceHeader';
 import ProductDetails from "./components/ProductDetails";
-import Index from './components/Index';
+import Invoice from './components/Invoice';
 import generateInvoicePdf from "./components/generateInvoicePdf";
 
 
@@ -22,8 +22,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/Index" />} />
-        <Route path="/Index" element={<Index />} />
+        <Route path="/" element={<Navigate to="/Invoice" />} />
+        <Route path="/Invoice" element={<Invoice />} />
         
        
       </Routes>
