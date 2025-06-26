@@ -1,4 +1,4 @@
-/* تنسيق عام */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -10,30 +10,31 @@ body, html {
 .four-sections-container {
   display: flex;
   direction: rtl;
-  gap: 10px; /* مسافة بين الأقسام */
+  gap: 10px; 
   padding: 10px;
-  flex-wrap: nowrap; /* الأقسام كلها جنب بعض */
+  flex-wrap: nowrap; 
 }
 
 .section {
   background-color: #fff;
   
-  padding: 15px;
+  padding: 5px;
   font-weight: bold;
   font-size: 17px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  /* ❌ احذف أي شيء مثل width: 100% أو flex: 1 */
+  
 }
 
 
-/* ✅ تنسيق شبكة الحقول: label جنب input لكن كل صف تحته الآخر */
+
 .form-grid {
   display: grid;
-  grid-template-columns: 100px 1fr; /* عمود لليبل وعمود للإنبوت */
-  gap: 7px 1px; /* مسافات بين الصفوف والأعمدة */
+  grid-template-columns: 100px 1fr; 
+  gap: 7px 1px; 
   width: 100%;
+  font-size: 16px;
 }
 
 .form-grid label {
@@ -51,9 +52,10 @@ body, html {
 }
 .form-grid-2 {
   display: grid;
-  grid-template-columns: 70px 1fr; /* عمود لليبل وعمود للإنبوت */
-  gap: 7px 1px; /* مسافات بين الصفوف والأعمدة */
+  grid-template-columns: 70px 1fr; 
+  gap: 7px 1px; 
   width: 100%;
+  font-size: 16px;
 }
 .form-grid-2  input {
   padding: 6px 10px;
@@ -71,89 +73,156 @@ body, html {
   box-sizing: border-box;
   font-size: 15px;
 }
-.form-grid-3 select{
+.form-grid-vertical {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; 
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+}
+
+
+.date-container {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.date-container input[type="date"] {
   padding: 6px 10px;
   border: 1px solid #aaa;
   border-radius: 6px;
-  width: 130px;
-  box-sizing: border-box;
   font-size: 15px;
-}
-.form-grid-3 {
-  display: grid;
-  grid-template-columns: 120px 2fr; /* عمود لليبل وعمود للإنبوت */
-  gap: 7px 1px; /* مسافات بين الصفوف والأعمدة */
   width: 100%;
+  box-sizing: border-box;
 }
+
+
+.store-labels label {
+  font-weight: bold;
+  text-align: right;
+}
+
+
+select {
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.radio-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  grid-column: span 2; 
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+
 .date-grid-container {
   display: flex;
   flex-direction: column;
   width: 700px;
   gap: 20px;
 }
-/* ✅ تنسيق صف التاريخ والراديو */
+
+
 .form-grid-4 {
   display: flex;
   align-items: center;
-  gap: 12px; /* المسافة بين العناصر */
+  gap: 12px; 
   flex-wrap: nowrap;
+  font-size: 16px;
 }
 
-/* ✅ حقل التاريخ */
-.form-grid-4 input[type="date"] {
-  padding: 6px 10px;
-  border: 1px solid #aaa;
-  border-radius: 6px;
-  width: 150px;
-  box-sizing: border-box;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table-scroll-wrapper {
+  max-height: 200px;    
+  overflow-x: auto;       
+  overflow-y: auto;      
+  border: 1px solid #ccc;
 }
 
-/* ✅ مجموعة الراديو */
-.radio-group {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* بين كل اختيار */
+
+.data-grid {
+  width: max-co100ntent;     
+  min-width: 100%;      
+  border-collapse: collapse;
+ font-size: 16px;
+}
+.data-grid-2 {
+  width: 100%;
+   margin-top: 9px;
+  table-layout: fixed; 
+  border-collapse: collapse;
+  font-size: 16px;
 }
 
-/* ✅ كل اختيار داخل الراديو */
-.radio-group label,
-.radio-option {
-  display: flex;
-  align-items: center;
-  gap: 4px; /* النص قريب من الزر */
+
+.data-grid th, .data-grid td,
+.data-grid-2 th, .data-grid-2 td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
   font-size: 14px;
+  overflow: hidden;
   white-space: nowrap;
 }
 
 
-
-/* ✅ غلاف الجدول بسكرول */
-.table-scroll-wrapper {
-  max-height: 200px;      /* طول ثابت للتمرير الرأسي */
-  overflow-x: auto;       /* سكرول أفقي عند كثرة الأعمدة */
-  overflow-y: auto;       /* سكرول رأسي عند كثرة الصفوف */
-  border: 1px solid #ccc;
-}
-
-/* ✅ تنسيق الجدول */
-.data-grid {
-  width: max-content;     /* مهم: يجعل الجدول يتمدد بالأعمدة */
-  min-width: 100%;        /* يضمن ملء الغلاف من البداية */
-  border-collapse: collapse;
-  font-size: 14px;
-}
-
-.data-grid th,
-.data-grid td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  text-align: center;
-  white-space: nowrap; /* يمنع كسر النص داخل الخلية */
-}
-
 .data-grid th {
   background-color: #007bff;
   color: white;
+}
+.data-grid-2 th {
+  background-color: #848f9b;
+  color: white;
+}
+.data-grid-2 input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 14px;
+}
+.table-scroll-wrapper-2 {
+  max-height: 100px;     
+  overflow-x: auto;       
+  overflow-y: auto;      
+  border: 1px solid #ccc;
+}
+.table-scroll-wrapper-2 thead th ,
+.table-scroll-wrapper thead th {
+  position: sticky;
+  top: 0;
+
+  z-index: 2;         
+  border-bottom: 2px solid #ccc;
 }
 .section-divider {
   border-bottom: 1px solid #007bff;
@@ -167,7 +236,7 @@ body, html {
   margin-top: 10px;
    margin-right: 10px;
   flex-wrap: wrap;
-  font-family: 'Tahoma', sans-serif; /* ✅ توحيد الخط */
+  font-family: 'Tahoma', sans-serif; 
   font-size: 14px;
 }
 
@@ -192,16 +261,16 @@ body, html {
 }
 
 .action-button {
-  padding: 10px 10px;
-  font-size: 15px;
-  font-family: inherit; /* ✅ نفس الخط */
+  padding: 9px 9px;
+  font-size: 12px;
+  font-family: inherit; 
   font-weight: bold;
   border: none;
   border-radius: 8px;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  min-width: 110px;
+  min-width: 100px;
 }
 
 .action-button:hover {
@@ -209,26 +278,5 @@ body, html {
 }
 
 
-.editable-product-table {
-  width: 100%;
-   margin-top: 30px;
-  table-layout: fixed; 
-  border-collapse: collapse;
-}
-.editable-product-table th,
-.editable-product-table td {
-  border: 1px solid #ccc;
-  padding: 6px;
-  text-align: center;
-  font-size: 14px;
-  overflow: hidden;
-  white-space: nowrap;
-}
 
-.editable-product-table input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 6px;
-  font-size: 14px;
-}
 
