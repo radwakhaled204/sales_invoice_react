@@ -24,10 +24,22 @@ body, html {
   justify-content: flex-start;
   align-items: flex-start;  
 }
+.section-2 {
+  background-color: #fff;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 17px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; 
+    border: 1px solid #aaa;
+  border-radius: 6px; 
+    box-sizing: border-box;
+}
 
 
-
-.form-grid {
+.form-grid ,
+.form-grid-2{
   display: grid;
   grid-template-columns: 100px 1fr; 
   gap: 7px 1px; 
@@ -48,13 +60,7 @@ body, html {
   width: 130px;
   box-sizing: border-box;
 }
-.form-grid-2 {
-  display: grid;
-  grid-template-columns: 70px 1fr; 
-  gap: 7px 1px; 
-  width: 100%;
-  font-size: 16px;
-}
+
 .form-grid-2  input {
   padding: 6px 10px;
   border: 1px solid #aaa;
@@ -132,7 +138,7 @@ select {
 .date-grid-container {
   display: flex;
   flex-direction: column;
-  width: 700px;
+  width: 500px;
   gap: 20px;
 }
 
@@ -160,23 +166,18 @@ select {
 
 
 
-.table-scroll-wrapper {
-  max-height: 150px;    
-  overflow-x: auto;       
-  overflow-y: auto;      
-  border: 1px solid #ccc;
-}
+
+
 
 
 .data-grid {
-  width: max-co100ntent;     
+  width: max-content;     
   min-width: 100%;      
   border-collapse: collapse;
  font-size: 16px;
 }
 .data-grid-2 {
-  width: 100%;
-   margin-top: 9px;
+  width: 100%; 
   table-layout: fixed; 
   border-collapse: collapse;
   font-size: 16px;
@@ -197,6 +198,7 @@ select {
 .data-grid th {
   background-color: #007bff;
   color: white;
+
 }
 .data-grid-2 th {
   background-color: #848f9b;
@@ -208,20 +210,47 @@ select {
   padding: 6px;
   font-size: 14px;
 }
+.table-scroll-wrapper {
+  max-height: 200px;    
+  overflow-x: auto;       
+  overflow-y: hidden;      
+  border: 1px solid #ccc;
+}
+
 .table-scroll-wrapper-2 {
-  max-height: 100px;     
+  max-height: 150px;  
+  margin-top: 9px;    
+  overflow-x: auto;       
+  overflow-y: auto;      
+  border: 1px solid #ccc;
+}
+.table-scroll-wrapper-3 {
+  max-height: 220px;    
   overflow-x: auto;       
   overflow-y: auto;      
   border: 1px solid #ccc;
 }
 .table-scroll-wrapper-2 thead th ,
-.table-scroll-wrapper thead th {
+.table-scroll-wrapper thead th ,
+.table-scroll-wrapper-3 thead th 
+ {
   position: sticky;
   top: 0;
-
-  z-index: 2;         
+  z-index: 2; 
+     
   border-bottom: 2px solid #ccc;
 }
+.sticky-col {
+  position: sticky;
+  right: 0; 
+  background: white;
+  z-index: 2;
+}
+
+.data-grid thead th.sticky-col {
+  z-index: 2; 
+}
+
 .section-divider {
   border-bottom: 1px solid #007bff;
  
@@ -278,3 +307,103 @@ select {
 
 
 
+
+
+
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+.section-2 {
+  position: relative;
+  padding: 5px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.double-form-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 7px 12px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.double-form-grid label {
+  font-weight: bold;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.double-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.double-input input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  font-size: 14px;
+  min-width: 60px;
+}
+
+.symbol-outside {
+  font-size: 16px;
+  color: #333;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.action-button-2 {
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  min-width: 100px;
+  margin-top: 30px;
+  margin-right: auto;
+  display: block;
+}
+
+.action-button-2:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .double-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .double-form-grid label {
+    text-align: right;
+  }
+  .double-input {
+    flex-wrap: wrap;
+  }
+}
