@@ -57,40 +57,51 @@ const Invoice = ({ onChange }) => {
           <label>رقم الفاتورة</label>
           <input type="text" name="invoiceNumber" />
 
-          <label>تاريخ الفاتورة</label>
-          <input type="date" name="invoiceDate" />
+
 
           <label>رقم الإذن</label>
           <input type="text" name="permissionNumber" />
 
-          <label>تاريخ الإذن</label>
-          <input type="date" name="permissionDate" />
 
+          <label>الكود</label>
+          <input type="text" name="client" />
           <label>رقم دفترى</label>
           <input type="text" name="dafterNumber" />
+     <label>المخزن الرئيسي</label>
+          <select name="mainStore">
+      <option>المخزن الرئيسى</option>
+      <option value="1">1</option>
+    </select>          
         </div>
       </div>
 
      
       <div className="section">
-        <div className="form-grid-2 ">
-          <label>الكود</label>
-          <input type="text" name="client" />
+        <div className="form-grid-2">
+          <label>تاريخ الفاتورة</label>
+          <input type="date" name="invoiceDate" />    
+          <label>تاريخ الإذن</label>
+          <input type="date" name="permissionDate" />                
+
           <label>العميل</label>
           <input type="text" name="client" />
-          <label>المبيعات</label>
-          <input type="text" name="sales" />
+
           <label>المستلم</label>
           <select name="receiver">
             <option>اختر</option>
             <option value="sub1">1</option>
-          </select>          
+          </select>   
+   <label>المخزن الفرعي</label>
+    <select name="subStore">
+      <option>المخزن الفرعى</option>
+      <option value="1">1</option>
+    </select>              
         </div>
       </div>   
 <div className="section">
   <div className="form-grid-vertical">
 
- 
+    
     <div className="radio-group">
       <label className="radio-option">
         <input type="radio" name="status" value="registered" />
@@ -113,20 +124,20 @@ const Invoice = ({ onChange }) => {
     </div>
 
 
-      <label>المخزن الرئيسي</label>
+
+     <label>المخزن الرئيسي</label>
           <select name="mainStore">
       <option>المخزن الرئيسى</option>
       <option value="1">1</option>
-    </select>
-
-
- 
-
-<label>المخزن الفرعي</label>
+    </select>  
+     <label>المخزن الفرعي</label>
     <select name="subStore">
       <option>المخزن الفرعى</option>
       <option value="1">1</option>
     </select>
+  
+
+
 
   </div>
 </div>
@@ -135,96 +146,106 @@ const Invoice = ({ onChange }) => {
     <div className="table-scroll-wrapper">
       <table className="data-grid">
         <thead>
-          <tr>
-            <th>كود</th>
-            <th>الاسم</th>
+          <tr>          
+            <th className="sticky-col">الاسم</th>
             <th>الكمية</th>
             <th>الوحدة</th>
-            <th>التصنيف</th>
-            <th>السعر</th>
-            <th>الضريبة</th>
-            <th>المورد</th>
-            <th>تاريخ الانتهاء</th>
-            <th>الباركود</th>
-            <th>الباركود</th>
-            <th>الباركود</th>
-            <th>الباركود</th>
-            
+            <th>السعر بعد الخصم</th>
+            <th>الاسم</th>            
+            <th>الكمية</th>
+            <th>الوحدة</th>
+            <th>السعر بعد الخصم</th>
+            <th>الاسم</th>            
+            <th>الكمية</th>
+            <th>الوحدة</th>
+            <th>السعر بعد الخصم</th>                                         
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>001</td>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
             <td>باراسيتامول</td>
             <td>50</td>
-            <td>علبة</td>
-            <td>مسكن</td>
+            <td>علبة</td>  
             <td>12.50</td>
-            <td>5%</td>
-            <td>صيدليات المتحدة</td>
-            <td>2025-12-30</td>
-            <td>998822</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>                         
           </tr>
           <tr>
-            <td>002</td>
-            <td>أموكسيسيلين</td>
-            <td>30</td>
-            <td>كرتونة</td>
-            <td>مضاد حيوي</td>
-            <td>22.00</td>
-            <td>0%</td>
-            <td>دواء مصر</td>
-            <td>2024-11-15</td>
-            <td>889977</td>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>             
           </tr>
           <tr>
-            <td>002</td>
-            <td>أموكسيسيلين</td>
-            <td>30</td>
-            <td>كرتونة</td>
-            <td>مضاد حيوي</td>
-            <td>22.00</td>
-            <td>0%</td>
-            <td>دواء مصر</td>
-            <td>2024-11-15</td>
-            <td>889977</td>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>            
           </tr>
           <tr>
-            <td>002</td>
-            <td>أموكسيسيلين</td>
-            <td>30</td>
-            <td>كرتونة</td>
-            <td>مضاد حيوي</td>
-            <td>22.00</td>
-            <td>0%</td>
-            <td>دواء مصر</td>
-            <td>2024-11-15</td>
-            <td>889977</td>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>   
           </tr>
           <tr>
-            <td>002</td>
-            <td>أموكسيسيلين</td>
-            <td>30</td>
-            <td>كرتونة</td>
-            <td>مضاد حيوي</td>
-            <td>22.00</td>
-            <td>0%</td>
-            <td>دواء مصر</td>
-            <td>2024-11-15</td>
-            <td>889977</td>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>     
           </tr>
-           <tr>
-            <td>002</td>
-            <td>أموكسيسيلين</td>
-            <td>30</td>
-            <td>كرتونة</td>
-            <td>مضاد حيوي</td>
-            <td>22.00</td>
-            <td>0%</td>
-            <td>دواء مصر</td>
-            <td>2024-11-15</td>
-            <td>889977</td>
-          </tr>                                       
+          <tr>
+<td className="sticky-col">باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>
+            <td>باراسيتامول</td>
+            <td>50</td>
+            <td>علبة</td>  
+            <td>12.50</td>    
+          </tr>                                    
         </tbody>
       </table>
     </div>
@@ -246,22 +267,24 @@ const Invoice = ({ onChange }) => {
   <button className="action-button">جديد</button>
   <button className="action-button">إضافة</button>
 </div>   
-      <table className="data-grid-2">
-        <thead>
-          <tr>
-            <th>وحدة</th>
-            <th>كمية</th>
-            <th>سعر</th>
-            <th>ن خصم</th>
-            <th>خصم</th>
-            <th>س.ب.خصم</th>
-            <th>قيمة ب خصم</th>
-            <th>قيمة</th>
-            <th>بعد خصم</th>
-            <th>خصم</th>
-          </tr>
-        </thead>
-        <tbody>
+
+<div className="table-scroll-wrapper-2">
+  <table className="data-grid-2">
+    <thead>
+      <tr>
+        <th>وحدة</th>
+        <th>كمية</th>
+        <th>سعر</th>
+        <th>ن خصم</th>
+        <th>خصم</th>
+        <th>س.ب.خصم</th>
+        <th>قيمة ب خصم</th>
+        <th>قيمة</th>
+        <th>بعد خصم</th>
+        <th>خصم</th>
+      </tr>
+    </thead>
+ <tbody>
           {rows.map((row, index) => (
             <tr key={index}>
               <td>
@@ -345,190 +368,125 @@ const Invoice = ({ onChange }) => {
                 />
               </td>
             </tr>
+            
           ))}
+      <tr>
+        <td>كرتونة</td>
+        <td>5</td>
+        <td>100</td>
+        <td>15%</td>
+        <td>15</td>
+        <td>85</td>
+        <td>425</td>
+        <td>500</td>
+        <td>425</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>كرتونة</td>
+        <td>5</td>
+        <td>100</td>
+        <td>15%</td>
+        <td>15</td>
+        <td>85</td>
+        <td>425</td>
+        <td>500</td>
+        <td>425</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>كرتونة</td>
+        <td>5</td>
+        <td>100</td>
+        <td>15%</td>
+        <td>15</td>
+        <td>85</td>
+        <td>425</td>
+        <td>500</td>
+        <td>425</td>
+        <td>3</td>
+      </tr>   
+      <tr>
+        <td>كرتونة</td>
+        <td>5</td>
+        <td>100</td>
+        <td>15%</td>
+        <td>15</td>
+        <td>85</td>
+        <td>425</td>
+        <td>500</td>
+        <td>425</td>
+        <td>3</td>
+      </tr>  
+      <tr>
+        <td>كرتونة</td>
+        <td>5</td>
+        <td>100</td>
+        <td>15%</td>
+        <td>15</td>
+        <td>85</td>
+        <td>425</td>
+        <td>500</td>
+        <td>425</td>
+        <td>3</td>
+      </tr>                                 
         </tbody>
-      </table>
-<div className="table-scroll-wrapper-2">
-  <table className="data-grid">
-    <thead>
-      <tr>
-        <th>وحدة</th>
-        <th>كمية</th>
-        <th>سعر</th>
-        <th>ن خصم</th>
-        <th>خصم</th>
-        <th>س.ب.خصم</th>
-        <th>قيمة ب خصم</th>
-        <th>قيمة</th>
-        <th>بعد خصم</th>
-        <th>خصم</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>علبة</td>
-        <td>50</td>
-        <td>12.50</td>
-        <td>5%</td>
-        <td>2.50</td>
-        <td>10.00</td>
-        <td>500.00</td>
-        <td>625.00</td>
-        <td>593.75</td>
-        <td>31.25</td>
-      </tr>
-      <tr>
-        <td>كرتونة</td>
-        <td>30</td>
-        <td>22.00</td>
-        <td>0%</td>
-        <td>0.00</td>
-        <td>22.00</td>
-        <td>660.00</td>
-        <td>660.00</td>
-        <td>660.00</td>
-        <td>0.00</td>
-      </tr>
-      <tr>
-        <td>كرتونة</td>
-        <td>20</td>
-        <td>30.00</td>
-        <td>10%</td>
-        <td>3.00</td>
-        <td>27.00</td>
-        <td>540.00</td>
-        <td>600.00</td>
-        <td>570.00</td>
-        <td>30.00</td>
-      </tr>
-      <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-            <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-            <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-            <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-            <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-            <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-            <tr>
-        <td>شريط</td>
-        <td>100</td>
-        <td>5.00</td>
-        <td>5%</td>
-        <td>0.25</td>
-        <td>4.75</td>
-        <td>475.00</td>
-        <td>500.00</td>
-        <td>487.50</td>
-        <td>12.50</td>
-      </tr>
-    </tbody>
+
   </table>
 </div>
 <div className="section-divider"></div>
      <div className="four-sections-container">
-       <div className="section">
-        <div className="form-grid">
-          <label>الإجمالي</label>
-          <input type="text" name="invoiceNumber" />
+<div className="section-2">
+  <div className="double-form-grid">
+    <label>الإجمالي</label>
+    <div className="double-input">
+      <input type="text" name="total1" />
+      <input type="text" name="total2" />
+    </div>
 
-          <label>خصم</label>
-         <input type="text" name="dafterNumber" />
-          
+    <label>خصم</label>
+    <div className="double-input">
+      <input type="text" name="discountMain" />
+      <span className="symbol-outside">%</span>
+      <input type="text" name="discountSmall1" />
+      <input type="text" name="discountSmall2" />
+    </div>
 
-          <label>ضريبة</label>
-         <input type="text" name="dafterNumber" />
+    <label>بعد الخصم</label>
+    <div className="double-input">
+      <input type="text" name="afterDiscount1" />
+     
+    </div>
+
+    <label>ضريبة</label>
+    <div className="double-input">
+      <input type="text" name="taxMain" />
+      <span className="symbol-outside">%</span>
+      <input type="text" name="taxSmall1" />
+    </div>
+
+    <label>قيمة الفاتورة</label>
+    <div className="double-input">
+      <input type="text" name="invoiceValue1" />
+      
+    </div>
+
+    <label>ض.خ. الإضافية</label>
+    <div className="double-input">
+      <input type="text" name="additionalTaxMain" />
+      <span className="symbol-outside">%</span>
+      <input type="text" name="additionalTaxSmall1" />
+    </div>
+  </div>
+
+  <button className="action-button-2">ترحيل</button>
+</div>
 
 
-           <label>ض.خ. الاضافية</label>
-          <input type="text" name="dafterNumber" />         
-        </div>
-      </div>   
-             <div className="section">
-        <div className="form-grid">
-           <label> </label>
-          <input type="text" name="invoiceNumber" />
 
-
-
-          <label>بعد الخصم</label>
-          <input type="text" name="dafterNumber" />
-
-
-
-          <label>قيمة الفاتورة</label>
-          <input type="text" name="dafterNumber" />
-           <label>ض.خ. الاضافية</label>
-          <input type="text" name="dafterNumber" />         
-        </div>
-      </div>     
-    
  <div className="section"> 
  <div className="date-grid-container">
-    <div className="table-scroll-wrapper">
+    <div className="table-scroll-wrapper-3">
 <table className="data-grid">
   <thead>
     <tr>
