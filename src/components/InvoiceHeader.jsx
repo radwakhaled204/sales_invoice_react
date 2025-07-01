@@ -1,35 +1,4 @@
-// import React from 'react';
 
-// const InvoiceHeader = () => {
-//   return (
-//     <div className="invoice-header">
-//       <label>رقم الفاتورة: <input type="text" /></label>
-//       <label>تاريخ  الفاتورة: <input type="date" /></label>
-//       <label>العميل: <input type="text" /></label>
-//       <label>المستلم: <input type="text" /></label>
-//       <label>نوع العملية:
-//         <select>
-//           <option>صرف</option>
-//           <option>شراء</option>
-//         </select>
-//       </label>
-//       <label>المخزن الرئيسي:
-//         <select>
-//           <option>الرئيسي</option>
-//           <option>الفرعي</option>
-//         </select>
-//       </label>
-//             <label>المخزن الفرعي:
-//         <select>
-//           <option>الرئيسي</option>
-//           <option>الفرعي</option>
-//         </select>
-//       </label>
-//     </div>
-//   );
-// };
-
-// export default InvoiceHeader;
 
 import React from "react";
 import "../styles/InvoiceHeader.css";
