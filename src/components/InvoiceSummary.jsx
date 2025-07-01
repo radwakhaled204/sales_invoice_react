@@ -89,7 +89,7 @@ return (
 
       </div>
 
-      {/* شمال: جدول القيود */}
+     
       <div className="journal-container">
         <table className="journal-table">
           <thead>
