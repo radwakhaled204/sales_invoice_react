@@ -419,7 +419,7 @@ const Invoice = ({ onChange }) => {
         <td>3</td>
       </tr>  
       <tr>
-        <td>كرتونة</td>
+        <td>h</td>
         <td>5</td>
         <td>100</td>
         <td>15%</td>
