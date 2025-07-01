@@ -24,9 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/Invoice" />} />
         <Route path="/Invoice" element={<Invoice />} />
-        
-       
-      </Routes>
+  </Routes>
     </Router>
   );
 }
