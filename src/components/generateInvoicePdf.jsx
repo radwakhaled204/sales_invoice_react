@@ -2,7 +2,6 @@ import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
 import amiriFont from "./amiriFont";
 
-// تسجيل الخط العربي
 jsPDF.API.events.push(['addFonts', function () {
   this.addFileToVFS("Amiri-Regular.ttf", amiriFont);
   this.addFont("Amiri-Regular.ttf", "Amiri-Regular", "normal");
