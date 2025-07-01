@@ -50,7 +50,7 @@ const ProductDetails = ({ onChange }) => {
     <div className="product-details">
       <h2 className="section-title">بيانات المنتج</h2>
 
-      {/* First row: كود المنشأة and Bare Code */}
+    
       <div className="form-row">
         <div className="form-group-inline">
           <label htmlFor="label">كود المنشأة:</label>
